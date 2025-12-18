@@ -18,6 +18,8 @@ public int getFollowersCount() {
 
         return FollowersCount;
 }
+
+
 public int getPostsCount() {
         return PostsCount;
 }

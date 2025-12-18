@@ -2,6 +2,7 @@ public class Profile {
     private int Age;
     private String UserName;
     private String ProfileINfo;
+
     public Profile(int Age, String UserName, String ProfileINfo) {
         this.Age = Age;
         this.UserName = UserName;
