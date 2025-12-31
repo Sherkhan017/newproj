@@ -1,11 +1,48 @@
-public class Main {
-    public static void main(String[] args){
-        Profile n1 = new Profile(17,"@sherkhan","student");
-        Post p1 = new Post(1000,"@sherkhan","My Holiday");
-        SocialNetwork s1 =  new SocialNetwork(100,5,90);
-        n1.verifyProfile();
-        p1.showPostinfo();
-        s1.showSocialNetworkinfo();
-    }
+import java.util.*;
 
+public class Main {
+    public static void main(String[] args) {
+
+        Profile n1 = new Profile(17, "@sherkhan", "student");
+        Profile n2 = new Profile(20, "@ali", "blogger");
+
+        Post p1 = new ImagePost(10, "Ali", "Nice photo!", "photo.jpg");
+        Post p2 = new ImagePost(200, "Sherkhan", "Holiday", "beach.png");
+
+        // 🔹 DATA POOL
+        List<Post> posts = new ArrayList<>();
+        posts.add(p1);
+        posts.add(p2);
+
+        List<Profile> profiles = new ArrayList<>();
+        profiles.add(n1);
+        profiles.add(n2);
+
+        // 🔹 FILTERING
+        System.out.println("Filtered posts (likes > 50):");
+        for (Post p : posts) {
+            if (p.getLikesCount() > 50) {
+                System.out.println(p);
+            }
+        }
+
+        // 🔹 SEARCHING
+        System.out.println("Searching profile:");
+        for (Profile p : profiles) {
+            if (p.getUserName().equals("@ali")) {
+                p.verifyProfile();
+            }
+        }
+
+        // 🔹 SORTING
+        posts.sort(Comparator.comparingInt(Post::getLikesCount));
+        System.out.println("Sorted posts:");
+        for (Post p : posts) {
+            System.out.println(p);
+        }
+
+        // 🔹 POLYMORPHISM
+        p1.showPostinfo();
+        p2.showPostinfo();
+    }
 }
