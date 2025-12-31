@@ -48,3 +48,4 @@ public class Profile {
         this.ProfileINfo = ProfilePicture;
     }
 }
+
