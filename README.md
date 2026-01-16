@@ -1,3 +1,26 @@
+Assignment 3 
+All SQL queries are saved in the query folder.
+Each file contains separate SQL scripts for:
+- creating tables
+- inserting data
+- selecting data
+- updating data
+- deleting data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Overview
 
 This project represents a Social Media platform implemented in Java.
