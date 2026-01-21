@@ -1,4 +1,8 @@
 Assignment 3 
+Added PostgreSQL database connection class
+Implemented ProfileDAO CRUD operations using JDBC
+Implemented PostDAO CRUD operations using JDBC
+Added Main class to demonstrate database operations
 All SQL queries are saved in the query folder.
 Each file contains separate SQL scripts for:
 - creating tables
